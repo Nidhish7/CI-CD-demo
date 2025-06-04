@@ -33,7 +33,7 @@ def git_commit(message):
         print("Failed to commit the changes.")
     
     
-def git_push(first_push = False):
+def git_push(first_push = True):
     print("Pushing the changes the GitHub...")
     try:
         if first_push:
@@ -50,7 +50,7 @@ def git_push(first_push = False):
 if __name__ == "__main__":
     
     git_status()
-    
+
     if has_changes_to_commit():
         git_add()
         git_commit("Changes Committed Automatically")
