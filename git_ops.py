@@ -39,8 +39,10 @@ def git_push(first_push = True):
     try:
         if first_push:
             subprocess.run(["git", "push", "-u", "origin", "main"], check=True)
+            print("Successfully pushed the changes to Github")
         else:
             subprocess.run(["git", "push"], check=True)
+            print("Successfully pushed the changes to Github")
     except subprocess.CalledProcessError:
         print("Failed to push the changes.")
 
