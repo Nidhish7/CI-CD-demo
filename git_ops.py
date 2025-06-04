@@ -56,7 +56,8 @@ if __name__ == "__main__":
 
     if has_changes_to_commit():
         git_add()
-        git_commit("Changes Committed Automatically")
+        message = input("Enter the commit message you would like to proceed with.")
+        git_commit(message)
         git_push()
     else:
         print("No Changes to commit.")
